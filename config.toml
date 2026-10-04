@@ -1,0 +1,26 @@
+# Victoria 3 advisor settings. Paths may be absolute or relative to this folder.
+# Use single quotes around Windows paths so backslashes are kept as they are.
+
+[paths]
+save_dir = 'C:\Users\Huang\Documents\Paradox Interactive\Victoria 3\save games'
+log_dir  = 'C:\Users\Huang\Documents\Paradox Interactive\Victoria 3\logs'
+game_dir = 'D:\Steam\steamapps\common\Victoria 3\game'   # used for English names of buildings, laws, countries
+rakaly   = 'bin\rakaly.exe'
+data_dir = 'data'
+
+[watch]
+save_name    = "autosave.v3"            # the file the game overwrites at each autosave
+poll_seconds = 2
+log_files    = ["debug.log", "game.log"]  # where the telemetry mod's lines may appear
+
+[advisor]
+model            = "claude-sonnet-5-5"
+max_spoken_words = 120
+max_output_tokens = 16000   # room for the model's thinking plus the reply; too low cuts the advice off
+effort           = "medium" # how hard the model thinks: "low" is quickest, "high" is most thorough, "" = model default
+
+[voice]
+enabled      = true
+rate         = 1       # -10 (slow) to 10 (fast)
+voice_name   = ""      # empty = Windows default voice
+speak_events = true    # speak alerts from the telemetry mod straight away
